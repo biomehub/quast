@@ -21,7 +21,6 @@ RUN apt-get update -y; \
 #  && sh /opt/quast-5.0.2/install_full.sh
 
 RUN pip install --upgrade setuptools pip \
-    && cd quast \
     && python /opt/quast-5.0.2/setup.py develop \
 
  ENV PATH /opt/quast-5.0.2/:$PATH
