@@ -15,7 +15,7 @@ RUN apt-get update -y; \
 
 # Download & install Diamond
 
- RUN wget wget https://downloads.sourceforge.net/project/quast/quast-5.0.2.tar.gz \
+ RUN wget https://downloads.sourceforge.net/project/quast/quast-5.0.2.tar.gz \
   && tar -C /opt/ -zxf quast-5.0.2.tar.gz \
   && rm quast-5.0.2.tar.gz
 #  && sh /opt/quast-5.0.2/install_full.sh
@@ -23,4 +23,4 @@ RUN apt-get update -y; \
 RUN pip install --upgrade setuptools pip \
     && python /opt/quast-5.0.2/setup.py develop \
 
- ENV PATH /opt/quast-5.0.2/:$PATH
+ENV PATH /opt/quast-5.0.2/:$PATH
